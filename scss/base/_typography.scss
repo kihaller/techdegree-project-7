@@ -5,6 +5,7 @@
 * {
   font-family: $font-stack-primary;
   font-weight: 400;
+
 }
 
 strong {
@@ -12,5 +13,12 @@ strong {
 }
 
 h2 {
+  margin-top: 15px !important;
+  margin-left: 0 !important;
+  margin-bottom: 10px !important;
+}
+
+h3 {
   margin: 0;
+  font-size: .8rem;
 }

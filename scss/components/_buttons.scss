@@ -163,6 +163,7 @@ input:checked+.slider:after {
   color: lightgrey;
   border: $border;
   border-radius: 5px;
+  background-color: $color-background;
 }
 
 .widget-two-button {
