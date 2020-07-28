@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <header>
+    <h1><strong>Your</strong>App&trade;</h1>
+    <div class="notification-icon">
+      <a href="icons/icon-bell.svg">
+        <img
+          src="icons/icon-bell.svg"
+          alt="Bell icon"
+          height="20px"
+          width="20px"
+        />
+      </a>
+    </div>
+    <div class="profile-avatar">
+      <img
+        src="images/member-2.jpg"
+        alt="profile avatar"
+        height="30px"
+        width="30px"
+      />
+      <span>Josh Sullivan</span>
+    </div>
+  </header>
+  <nav>
+    <div class="nav-items">
+      <a href="icons/icon-dashboard.svg">
+        <img src="icons/icon-dashboard.svg" alt="Dashbaord icon" />
+      </a>
+    </div>
+    <div class="nav-items">
+      <a href="icons/icon-members.svg">
+        <img src="icons/icon-members.svg" alt="member icon" />
+      </a>
+    </div>
+    <div class="nav-items">
+      <a href="icons/icon-visits.svg">
+        <img src="icons/icon-visits.svg" alt="visit icon" />
+      </a>
+    </div>
+    <div class="nav-items">
+      <a href="icons/icon-settings.svg">
+        <img src="icons/icon-settings.svg" alt="settings icon" />
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <body class="container">
+      <div class="dashboard-and-search">
+        <button type="button" id="dashboard-button">Dashboard</button>
+        <input
+          type="text"
+          class="input-search"
+          id="input"
+          placeholder="Search"
+        />
+      </div>
+
+      <div class="alert">
+        <span
+          class="closebtn"
+          onclick="this.parentElement.style.display='none';"
+          >&times;</span
+        >
+        <span
+          ><strong>Alert </strong>Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Integer in mauris ligula. Maecenas dictum eros.</span
+        >
+      </div>
+      <div class="grid">
+        <div id="traffic"></div>
+        <div id="daily-traffic"></div>
+        <div id="mobile-users"></div>
+        <div id="social-stats"></div>
+        <div id="new-members"></div>
+        <div id="recent-activity"></div>
+        <div id="message-user">
+          <h2>MESSAGE USER</h2>
+          <input
+            type="text"
+            class="input"
+            id="input-search"
+            placeholder="Search for User"
+          />
+          <textarea
+            class="input"
+            id="input-message"
+            placeholder="Message for User"
+          >
+          </textarea>
+          <button type="submit">SEND</button>
+        </div>
+        <div id="settings">
+          <h2>SETTINGS</h2>
+          <!-- Rounded toggle switch -->
+          <div class="settings-slider">
+            <h2>Send Email Notifications</h2>
+            <label class="switch">
+              <input type="checkbox" />
+              <div class="slider round"></div>
+            </label>
+          </div>
+          <div class="settings-slider">
+            <h2>Set Profile to Public</h2>
+            <label class="switch">
+              <input type="checkbox" />
+              <div class="slider round"></div>
+            </label>
+          </div>
+          <select class="timezone-select">
+            <option value="">Select Timezone</option>
+            <option value="-12.0">(GMT -12:00)</option>
+            <option value="-11.0">(GMT -11:00)</option>
+            <option value="-10.0">(GMT -10:00)</option>
+            <option value="-9.0">(GMT -9:00)</option>
+            <option value="-8.0">(GMT -8:00)</option>
+            <option value="-7.0">(GMT -7:00)</option>
+            <option value="-6.0">(GMT -6:00)</option>
+            <option value="-5.0">(GMT -5:00)</option>
+            <option value="-4.0">(GMT -4:00)</option>
+            <option value="-3.0">(GMT -3:00)</option>
+            <option value="-2.0">(GMT -2:00)</option>
+            <option value="-1.0">(GMT -1:00)</option>
+            <option value="0.0">(GMT)</option>
+            <option value="1.0">(GMT +1:00)</option>
+            <option value="2.0">(GMT +2:00)</option>
+            <option value="3.0">(GMT +3:00)</option>
+            <option value="4.0">(GMT +4:00)</option>
+            <option value="5.0">(GMT +5:00)</option>
+            <option value="6.0">(GMT +6:00)</option>
+            <option value="7.0">(GMT +7:00)</option>
+            <option value="8.0">(GMT +8:00)</option>
+            <option value="9.0">(GMT +9:00)</option>
+            <option value="9.5">(GMT +9:30)</option>
+            <option value="10.0">(GMT +10:00)</option>
+            <option value="11.0">(GMT +11:00)</option>
+            <option value="12.0">(GMT +12:00)</option>
+          </select>
+          <div class="widget-two-button">
+            <button type="submit" id="save-button">SAVE</button>
+            <button type="submit" id="cancel-button">CANCEL</button>
+          </div>
+        </div>
+      </div>
+
+      <script src="js/main.js"></script>
+    </body>
+  </main>
+</html>

@@ -1,0 +1,32 @@
+header {
+  background-color: $color-primary;
+  color: #FFF;
+  display: flex;
+  margin: auto 0;
+  padding: 1em;
+  align-items: center;
+
+}
+
+h1 {
+  font-size: 1.2em;
+
+}
+
+h2 {
+  font-size: 1em;
+  color: $color-text;
+  margin: 20px;
+}
+
+
+.dashboard-and-search {
+  display: flex;
+  align-items: center;
+
+}
+
+.profile-avatar {
+  display: flex;
+  align-items: center;
+}

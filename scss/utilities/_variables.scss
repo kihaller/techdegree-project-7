@@ -5,6 +5,8 @@
 // Colors
 
 $color-text: #777;
+$color-primary: #7c7ebc;
+$color-secondary: #4c4b73;
 
 // Fonts
 
@@ -13,12 +15,17 @@ sans-serif;
 $font-stack-accent: 'Playfair Display',
 serif;
 
+//Border style
+$border: solid lightgrey .5px;
 
-// Layout
-
-$max-width: 1400px;
 
 // Breakpoints
 
 $breakpoint-tablet: 768px;
 $breakpoint-laptop: 1024px;
+
+
+// Slider Variables
+$slider-height: 30px;
+$slider-padding: 4px;
+$slider-width: 90px;

@@ -1,17 +1,38 @@
-.input {
+.input-search {
   display: block;
-  width: 60%;
-  margin: 2em auto;
+  width: 40%;
   padding: 10px;
-  border: 1px solid $color-text;
   border-radius: 5px;
-  background-image: url(../images/icon-small.png);
+  background-image: url(../icons/icon-search.png);
   background-position: calc(100% - 10px) center;
   background-repeat: no-repeat;
-  box-shadow: 0px 8px 3px -6px grey;
+  margin-left: auto;
+  margin-right: 20px;
+  border: $border;
+
 }
 
-.input:hover {
+.input-search:hover {
   background-color: #DCDCDC;
+
+}
+
+//input-search fields for message to user
+#input-search,
+#input-message {
+  @include widget-padding;
+  border: $border;
+  border-radius: 5px;
+  display: block;
+}
+
+#input-search {
+  height: 2em;
+  margin: 7px auto;
+}
+
+#input-message {
+  height: 10em;
+  margin: 7px auto;
 
 }

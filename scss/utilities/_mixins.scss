@@ -1,23 +1,14 @@
-// Images
-
-@mixin image-styles {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
-  width: 90%;
-  box-shadow: 5px 5px 9px 0px grey;
-
+@mixin widget {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  padding-left: 6%;
+  padding-right: 6%;
 }
 
-// Media Queries
-
-@mixin flexbox {
-  .grid {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-
-  }
-
+@mixin widget-padding {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }

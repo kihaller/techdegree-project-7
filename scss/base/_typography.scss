@@ -4,37 +4,13 @@
 
 * {
   font-family: $font-stack-primary;
-  color: $color-text;
-  box-sizing: border-box;
+  font-weight: 400;
 }
 
-.container {
-  margin: 0 auto;
-  margin-bottom: 2em;
-  max-width: 1200px;
-  padding: 0 1rem;
+strong {
+  font-weight: 700
 }
 
-/* ============================================= */
-/*              Plugin styles                      */
-/* ============================================= */
-
-//Captions
-
-.lb-caption {
-  text-align: center;
-
-}
-
-.lb-caption h1 {
-  font-family: $font-stack-accent;
-}
-
-.lb-caption p {
-  line-height: 1.5em;
-}
-
-.lb-number {
-  font-size: 8px !important;
-  color: $color-text !important;
+h2 {
+  margin: 0;
 }

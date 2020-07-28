@@ -1,0 +1,170 @@
+#dashboard-button {
+  color: $color-text;
+  border: none;
+  padding: 20px;
+  background-color: #FFF;
+  border-right: $border;
+}
+
+/* The alert message box */
+.alert {
+  padding: 15px;
+  font-size: .8em;
+  color: #FFF;
+  margin: 15px;
+  border-radius: 5px;
+  background-color: $color-primary;
+  opacity: 1;
+  transition: opacity 0.6s;
+
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: #FFF;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 11px;
+  cursor: pointer;
+  transition: .5s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
+
+/*Send and Save Buttons*/
+button[type=submit] {
+  @include widget-padding;
+  padding: 15px;
+  font-size: .8em;
+  color: #FFF;
+  display: block;
+  border-radius: 5px;
+  background-color: $color-primary;
+  font-weight: bold;
+  border-style: none;
+  margin: 7px auto;
+}
+
+#save-button {
+  width: 45%;
+  float: left;
+}
+
+#cancel-button {
+  width: 45%;
+  background-color: lightgrey;
+  float: right;
+}
+
+/* Toggle switch */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: $slider-width;
+  height: $slider-height;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  display: none;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: $slider-height - 2 * $slider-padding;
+  width: $slider-height - 2 * $slider-padding;
+  left: $slider-padding;
+  bottom: $slider-padding;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: $color-primary;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px $color-primary;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX($slider-width - $slider-height);
+  -ms-transform: translateX($slider-width - $slider-height);
+  transform: translateX($slider-width - $slider-height);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: $slider-height;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.slider:after {
+  content: 'OFF';
+  color: white;
+  display: block;
+  position: absolute;
+  transform: translate(0, -50%);
+  top: 50%;
+  right: $slider-padding;
+  font-size: 10px;
+}
+
+input:checked+.slider:after {
+  content: 'ON';
+  left: $slider-padding;
+}
+
+/* Float togge switches*/
+
+.settings-slider {
+  @include widget-padding;
+
+  h2 {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: 230px;
+  }
+}
+
+/* Timezone selector*/
+
+.timezone-select {
+  @include widget-padding;
+  display: block;
+  padding: 8px;
+  color: lightgrey;
+  border: $border;
+  border-radius: 5px;
+}
+
+.widget-two-button {
+  @include widget-padding;
+}
