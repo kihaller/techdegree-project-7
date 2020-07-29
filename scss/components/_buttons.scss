@@ -159,10 +159,11 @@ input:checked+.slider:after {
   @include widget-padding;
   display: block;
   padding: 8px;
-  color: lightgrey;
+  color: $color-text-lighter;
   border: $border;
   border-radius: 5px;
   background-color: $color-background;
+  margin-top: 10px;
 }
 
 .widget-two-button {

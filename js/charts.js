@@ -19,15 +19,33 @@ new Chart(document.getElementById("line-chart"), {
     ],
     datasets: [
       {
-        data: [500, 1500, 750, 1250, 1750, 1250, 1500, 1000, 1500, 2000],
+        data: [0, 500, 1000, 750, 1250, 1750, 1250, 1500, 1000, 1500, 2000],
         label: "",
-        borderColor: "#3e95cd",
-        fill: false,
+        borderColor: "#7477BF",
+        fill: true,
+        borderWidth: 1,
+        lineTension: 0,
+        pointBorderColor: "#7477BF",
+        pointRadius: 5,
+        pointBackgroundColor: "#FFF",
       },
     ],
   },
   options: {
     maintainAspectRatio: false,
+    legend: { display: true, position: "top", align: "end" },
+
+    scales: {
+      yAxes: [
+        {
+          ticks: {
+            max: 2500,
+            min: 0,
+            stepSize: 500,
+          },
+        },
+      ],
+    },
   },
 });
 
