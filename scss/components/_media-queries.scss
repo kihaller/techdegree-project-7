@@ -16,12 +16,36 @@
     }
   }
 
+  #social-stats {
+    margin-bottom: 20px;
+
+  }
+
   .profile-avatar span {
     display: block;
+  }
+
+  .media-name {
+    font-size: 16px;
+  }
+
+  .media-number {
+    font-size: 28px;
+
   }
 }
 
 @media screen and (min-width: $breakpoint-laptop) {
+
+
+  .media-name {
+    font-size: 20px;
+  }
+
+  .media-number {
+    font-size: 33px;
+
+  }
 
   .mobile-nav {
     display: none;

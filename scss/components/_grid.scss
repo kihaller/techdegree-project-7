@@ -19,7 +19,7 @@ main {
 body {
   display: grid;
   height: 100vh;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; //1 column track
 }
 
 /* Inner grid including widgets */
