@@ -64,12 +64,14 @@
     <body class="container">
       <div class="dashboard-and-search">
         <button type="button" id="dashboard-button">Dashboard</button>
-        <input
-          type="text"
-          class="input-search"
-          id="input"
-          placeholder="Search"
-        />
+        <div class="border">
+          <input
+            type="text"
+            class="input-search"
+            id="input"
+            placeholder="Search"
+          />
+        </div>
       </div>
 
       <div class="alert">
@@ -84,9 +86,18 @@
         >
       </div>
       <div class="grid">
-        <div id="traffic"></div>
-        <div id="daily-traffic"></div>
-        <div id="mobile-users"></div>
+        <div id="traffic">
+          <h2>TRAFFIC</h2>
+          <canvas id="line-chart"></canvas>
+        </div>
+        <div id="daily-traffic">
+          <h2>DAILY TRAFFIC</h2>
+          <canvas id="bar-chart"></canvas>
+        </div>
+        <div id="mobile-users">
+          <h2>MOBILE USERS</h2>
+          <canvas id="doughnut-chart"></canvas>
+        </div>
 
         <div id="social-stats">
           <!-- <h2>SOCIAL STATS</h2>
@@ -154,79 +165,93 @@
         <div id="new-members">
           <h2>NEW MEMBERS</h2>
           <div class="container-members">
-            <div id="member-1">
+            <div class="member">
               <img
+                class="member-photo"
                 src="images/member-1.jpg"
                 alt="profile avatar"
                 height="30px"
                 width="30px"
               />
-
-              <h3>Victoria Chambers</h3>
-              <a href="mailto:victoria.chambers80@example.com"
-                >victoria.chambers80@example.com</a
-              >
+              <div class="member-info">
+                <p>Victoria Chambers</p>
+                <a href="mailto:victoria.chambers80@example.com"
+                  >victoria.chambers80@example.com</a
+                >
+              </div>
 
               <span>10/15/15</span>
             </div>
 
-            <div id="member-2">
+            <div class="member">
               <img
+                class="member-photo"
                 src="images/member-2.jpg"
                 alt="profile avatar"
                 height="30px"
                 width="30px"
               />
-              <h3>Dale Byrd</h3>
-              <a href="mailto:dale.byrd52@example.com"
-                >dale.byrd52@example.com</a
-              >
+              <div class="member-info">
+                <p>Dale Byrd</p>
+                <a href="mailto:dale.byrd52@example.com"
+                  >dale.byrd52@example.com</a
+                >
+              </div>
               <span>10/15/15</span>
             </div>
-            <div id="member-3">
+            <div class="member">
               <img
+                class="member-photo"
                 src="images/member-3.jpg"
                 alt="profile avatar"
                 height="30px"
                 width="30px"
               />
-              <h3>Dawn Wood</h3>
-              <a href="mailto:dawn.wood61@example.com"
-                >dawn.wood61@example.com</a
-              >
+              <div class="member-info">
+                <p>Dawn Wood</p>
+                <a href="mailto:dawn.wood61@example.com"
+                  >dawn.wood61@example.com</a
+                >
+              </div>
               <span>10/15/15</span>
             </div>
-            <div id="member-4">
+            <div class="member">
               <img
+                class="member-photo"
                 src="images/member-4.jpg"
                 alt="profile avatar"
                 height="30px"
                 width="30px"
               />
-              <h3>Dan Oliver</h3>
-              <a href="mailto:dan.oliver82@example.com"
-                >dan.oliver82@example.com</a
-              >
+              <div class="member-info">
+                <p>Dan Oliver</p>
+                <a href="mailto:dan.oliver82@example.com"
+                  >dan.oliver82@example.com</a
+                >
+              </div>
               <span>10/15/15</span>
             </div>
           </div>
         </div>
 
         <div id="recent-activity">
-          <h2>NEW MEMBERS</h2>
+          <h2>RECENT ACTICITY</h2>
           <div class="container-activity">
-            <div id="activity-1">
+            <div class="member">
               <img
+                class="member-photo"
                 src="images/member-1.jpg"
                 alt="profile avatar"
                 height="30px"
                 width="30px"
               />
-              <p>
-                Victoria Chambers commented on
-                <strong>You App's SEO Tips</strong>
-              </p>
-              <span>4 hours ago</span>
+              <div class="member-info">
+                <p>
+                  Victoria Chambers commented on
+                  <strong>You App's SEO Tips</strong>
+                </p>
+                <span>4 hours ago</span>
+              </div>
               <img
                 src="icons/next.png"
                 alt="icon of a right arrow"
@@ -234,18 +259,21 @@
                 width="20px"
               />
             </div>
-            <div id="activity-2">
+            <div class="member">
               <img
+                class="member-photo"
                 src="images/member-2.jpg"
                 alt="profile avatar"
                 height="30px"
                 width="30px"
               />
-              <p>
-                Dale Byrd liked the post
-                <strong>Facebook's Changes for 2016</strong>
-              </p>
-              <span>5 hours ago</span>
+              <div class="member-info">
+                <p>
+                  Dale Byrd liked the post
+                  <strong>Facebook's Changes for 2016</strong>
+                </p>
+                <span>5 hours ago</span>
+              </div>
               <img
                 src="icons/next.png"
                 alt="icon of a right arrow"
@@ -253,18 +281,21 @@
                 width="20px"
               />
             </div>
-            <div id="activity-3">
+            <div class="member">
               <img
+                class="member-photo"
                 src="images/member-3.jpg"
                 alt="profile avatar"
                 height="30px"
                 width="30px"
               />
-              <p>
-                Dawn Wood commented on
-                <strong>Facebook's Changes for 2016</strong>
-              </p>
-              <span>5 hours ago</span>
+              <div class="member-info">
+                <p>
+                  Dawn Wood commented on
+                  <strong>Facebook's Changes for 2016</strong>
+                </p>
+                <span>5 hours ago</span>
+              </div>
               <img
                 src="icons/next.png"
                 alt="icon of a right arrow"
@@ -273,18 +304,21 @@
               />
             </div>
 
-            <div id="activity-4">
+            <div class="member">
               <img
+                class="member-photo"
                 src="images/member-4.jpg"
                 alt="profile avatar"
                 height="30px"
                 width="30px"
               />
-              <p>
-                Dan Oliver posted
-                <strong>Your App's SEO Tips</strong>
-              </p>
-              <span>1 day ago</span>
+              <div class="member-info">
+                <p>
+                  Dan Oliver posted
+                  <strong>Your App's SEO Tips</strong>
+                </p>
+                <span>1 day ago</span>
+              </div>
               <img
                 src="icons/next.png"
                 alt="icon of a right arrow"
@@ -308,8 +342,7 @@
             id="input-message"
             placeholder="Message for User"
             style="resize: none;"
-          >
-          </textarea>
+          ></textarea>
           <button type="submit">SEND</button>
         </div>
         <div id="settings">
@@ -364,8 +397,9 @@
           </div>
         </div>
       </div>
-
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
       <script src="js/main.js"></script>
+      <script src="js/charts.js"></script>
     </body>
   </main>
 </html>

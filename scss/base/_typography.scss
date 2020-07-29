@@ -20,5 +20,11 @@ h2 {
 
 h3 {
   margin: 0;
-  font-size: .8rem;
+  font-size: $font-size;
+  margin-top: 11px;
+}
+
+select {
+  font-size: $font-size;
+
 }

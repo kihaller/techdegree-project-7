@@ -1,8 +1,16 @@
-@media (min-width: $breakpoint-tablet) {
- 
-}
+@media (min-width: $breakpoint-tablet) {}
 
-@media (min-width: $breakpoint-laptop) {
-  
-}
+@media (min-width: $breakpoint-laptop) {}
 
+
+
+@media screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+
+    div {
+      grid-column: auto !important;
+      grid-row: auto;
+    }
+  }
+}

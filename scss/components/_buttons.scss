@@ -3,7 +3,6 @@
   border: none;
   padding: 20px;
   background-color: #FFF;
-  border-right: $border;
 }
 
 /* The alert message box */
@@ -57,7 +56,7 @@ button[type=submit] {
 
 #cancel-button {
   width: 45%;
-  background-color: lightgrey;
+  background-color: $color-text;
   float: right;
 }
 
@@ -85,7 +84,7 @@ button[type=submit] {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: $color-text;
   -webkit-transition: .4s;
   transition: .4s;
 }

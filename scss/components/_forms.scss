@@ -9,7 +9,7 @@
   margin-left: auto;
   margin-right: 20px;
   border: $border;
-
+  font-size: $font-size;
 }
 
 .input-search:hover {
@@ -25,15 +25,20 @@
   border-radius: 5px;
   display: block;
   background-color: $color-background;
+  margin: 7px auto;
+  padding: 10px 20px;
+  font-size: $font-size;
+}
+
+#input-search::placeholder,
+#input-message::placeholder {
+  color: $color-text-lighter;
 }
 
 #input-search {
   height: 2em;
-  margin: 7px auto;
 }
 
 #input-message {
   height: 10em;
-  margin: 7px auto;
-
 }
