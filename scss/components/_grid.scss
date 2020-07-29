@@ -26,55 +26,15 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
 
+  div {
+    grid-column: auto;
+    grid-row: auto;
+  }
 }
 
-#traffic {
-  @include widget;
-  grid-column: 1 / span 2;
-  border-bottom: $border;
-}
-
-#daily-traffic {
-  @include widget;
-  grid-column: 1 / span 1;
-  border-right: $border;
-}
-
-#mobile-users {
-  @include widget;
-  grid-column: 2 / span 1;
-
-}
-
-#social-stats {
-  @include widget;
-  grid-column: 1 / span 2;
+.widget {
+  @include widget-small;
   border-top: $border;
-  border-bottom: $border;
-}
-
-#new-members {
-  @include widget;
-  grid-column: 1 / span 1;
-  border-right: $border;
-}
-
-#recent-activity {
-  @include widget;
-  grid-column: 2 / span 1;
-}
-
-#message-user {
-  @include widget;
-  grid-column: 1 / span 1;
-  border-right: $border;
-  border-top: $border;
-}
-
-#settings {
-  @include widget;
-  border-top: $border;
-  grid-column: 2 / span 1;
 }

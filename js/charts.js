@@ -26,6 +26,9 @@ new Chart(document.getElementById("line-chart"), {
       },
     ],
   },
+  options: {
+    maintainAspectRatio: false,
+  },
 });
 
 //Bar Chart
@@ -50,6 +53,7 @@ new Chart(document.getElementById("bar-chart"), {
     ],
   },
   options: {
+    maintainAspectRatio: false,
     legend: { display: false },
     scales: {
       yAxes: [
@@ -80,6 +84,7 @@ new Chart(document.getElementById("doughnut-chart"), {
     ],
   },
   options: {
+    maintainAspectRatio: false,
     legend: {
       position: "right",
       align: "middle",

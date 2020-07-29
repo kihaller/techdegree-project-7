@@ -4,13 +4,60 @@
 
 
 
-@media screen and (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr;
+@media screen and (min-width: $breakpoint-tablet) {
+  .container-social {
+    flex-direction: row;
 
-    div {
-      grid-column: auto !important;
-      grid-row: auto;
+    .social-media {
+      width: 25%;
     }
+  }
+}
+
+@media screen and (min-width: $breakpoint-laptop) {
+  nav {
+   display: block;
+ }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+  #traffic {
+    @include widget-large;
+    grid-column: 1 / span 2;
+  }
+
+  #daily-traffic {
+    grid-column: 1 / span 1;
+    border-right: $border;
+  }
+
+  #mobile-users {
+    grid-column: 2 / span 1;
+  }
+
+  #social-stats {
+    @include widget-large;
+    grid-column: 1 / span 2;
+  }
+
+  #new-members {
+    grid-column: 1 / span 1;
+    border-right: $border;
+  }
+
+  #recent-activity {
+    grid-column: 2 / span 1;
+  }
+
+  #message-user {
+    grid-column: 1 / span 1;
+    border-right: $border;
+  }
+
+  #settings {
+    grid-column: 2 / span 1;
   }
 }
