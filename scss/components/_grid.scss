@@ -27,6 +27,7 @@ body {
 .grid {
   display: grid;
   grid-template-columns: 1fr;
+  margin-bottom: 20px;
 
   div {
     grid-column: auto;

@@ -120,7 +120,6 @@ notificationIcon.addEventListener("click", function () {});
 const send = document.getElementsByClassName("submit-message")[0];
 const user = document.getElementById("input-search");
 const message = document.getElementById("input-message");
-const container = document.getElementById("container-message");
 const spanSubmit = document.getElementById("user-message-submit");
 const spanUser = document.getElementById("user");
 const spanMessage = document.getElementById("user-message");

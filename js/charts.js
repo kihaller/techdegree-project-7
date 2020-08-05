@@ -49,8 +49,10 @@ var lineChart = new Chart(document.getElementById("line-chart"), {
       xAxes: [
         {
           type: "time",
-          time: {
+          ticks: {
             min: "2020-04-24 13:00:00",
+          },
+          time: {
             unit: "week",
           },
         },
@@ -61,25 +63,25 @@ var lineChart = new Chart(document.getElementById("line-chart"), {
 
 document.getElementById("button-hourly").addEventListener("click", (event) => {
   lineChart.options.scales.xAxes[0].time.unit = "hour";
-  lineChart.options.scales.xAxes[0].time.min = "2020-05-23 13:00:00";
+  lineChart.options.scales.xAxes[0].ticks.min = "2020-05-23 13:00:00";
   lineChart.update();
 });
 
 document.getElementById("button-daily").addEventListener("click", (event) => {
   lineChart.options.scales.xAxes[0].time.unit = "day";
-  lineChart.options.scales.xAxes[0].time.min = "2020-05-17 13:00:00";
+  lineChart.options.scales.xAxes[0].ticks.min = "2020-05-17 13:00:00";
   lineChart.update();
 });
 
 document.getElementById("button-weekly").addEventListener("click", (event) => {
   lineChart.options.scales.xAxes[0].time.unit = "week";
-  lineChart.options.scales.xAxes[0].time.min = "2020-04-24 13:00:00";
+  lineChart.options.scales.xAxes[0].ticks.min = "2020-04-24 13:00:00";
   lineChart.update();
 });
 
 document.getElementById("button-monthly").addEventListener("click", (event) => {
   lineChart.options.scales.xAxes[0].time.unit = "month";
-  lineChart.options.scales.xAxes[0].time.min = "2020-02-24 13:00:00";
+  lineChart.options.scales.xAxes[0].ticks.min = "2020-02-24 13:00:00";
   lineChart.update();
 });
 
@@ -99,7 +101,7 @@ new Chart(document.getElementById("bar-chart"), {
   options: {
     maintainAspectRatio: false,
     legend: { display: false },
-    scales: {
+    dataset: {
       xAxes: [
         {
           barPercentage: 0.5,

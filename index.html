@@ -24,13 +24,13 @@
 
       <h1><strong>Your</strong>App&trade;</h1>
 
-      <div class="notification-icon" id="notification-icon">
-        <a href="#">
+      <div class="notification-icon">
+        <a id="notification-icon" href="#">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 35 35"
-            width="20px"
-            height="20px"
+            width="20"
+            height="20"
           >
             <path
               transform="translate(0 3)"
@@ -42,24 +42,15 @@
         </a>
 
         <!--Notification pop-up-->
-        <div class="popup-container" id="popup-container">
-          <!-- <div class="pop-up" id="notification">
-            <span class="popup-message" id="notification-text"> </span>
-            <span
-              class="closebtn-popup"
-              onclick="this.parentElement.style.display='none';"
-              >&times;</span
-            >
-          </div> -->
-        </div>
+        <div class="popup-container" id="popup-container"></div>
       </div>
 
       <div class="profile-avatar">
         <img
           src="images/random-avatar.jpg"
           alt="profile avatar"
-          height="30px"
-          width="30px"
+          height="30"
+          width="30"
         />
         <span>Josh Sullivan</span>
       </div>
@@ -165,7 +156,7 @@
                   name="button"
                   value="hourly"
                 />
-                <label for="hourly">Hourly</label>
+                <label for="button-hourly">Hourly</label>
               </div>
               <div class="button">
                 <input
@@ -174,7 +165,7 @@
                   name="button"
                   value="daily"
                 />
-                <label for="daily">Daily</label>
+                <label for="button-daily">Daily</label>
               </div>
               <div class="button">
                 <input
@@ -184,7 +175,7 @@
                   value="weekly"
                   checked
                 />
-                <label for="weekly">Weekly</label>
+                <label for="button-weekly">Weekly</label>
               </div>
               <div class="button">
                 <input
@@ -193,7 +184,7 @@
                   name="button"
                   value="monthly"
                 />
-                <label for="monthly">Monthly</label>
+                <label for="button-monthly">Monthly</label>
               </div>
             </div>
           </div>
@@ -291,8 +282,8 @@
                 class="member-photo"
                 src="images/member-1.jpg"
                 alt="profile avatar"
-                height="30px"
-                width="30px"
+                height="30"
+                width="30"
               />
               <div class="member-info">
                 <p>Victoria Chambers</p>
@@ -309,8 +300,8 @@
                 class="member-photo"
                 src="images/member-2.jpg"
                 alt="profile avatar"
-                height="30px"
-                width="30px"
+                height="30"
+                width="30"
               />
               <div class="member-info">
                 <p>Dale Byrd</p>
@@ -325,8 +316,8 @@
                 class="member-photo"
                 src="images/member-3.jpg"
                 alt="profile avatar"
-                height="30px"
-                width="30px"
+                height="30"
+                width="30"
               />
               <div class="member-info">
                 <p>Dawn Wood</p>
@@ -341,8 +332,8 @@
                 class="member-photo"
                 src="images/member-4.jpg"
                 alt="profile avatar"
-                height="30px"
-                width="30px"
+                height="30"
+                width="30"
               />
               <div class="member-info">
                 <p>Dan Oliver</p>
@@ -363,8 +354,8 @@
                 class="member-photo"
                 src="images/member-1.jpg"
                 alt="profile avatar"
-                height="30px"
-                width="30px"
+                height="30"
+                width="30"
               />
               <div class="member-info">
                 <p>
@@ -376,8 +367,8 @@
               <img
                 src="icons/next.png"
                 alt="icon of a right arrow"
-                height="20px"
-                width="20px"
+                height="20"
+                width="20"
               />
             </div>
             <div class="member">
@@ -385,8 +376,8 @@
                 class="member-photo"
                 src="images/member-2.jpg"
                 alt="profile avatar"
-                height="30px"
-                width="30px"
+                height="30"
+                width="30"
               />
               <div class="member-info">
                 <p>
@@ -398,8 +389,8 @@
               <img
                 src="icons/next.png"
                 alt="icon of a right arrow"
-                height="20px"
-                width="20px"
+                height="20"
+                width="20"
               />
             </div>
             <div class="member">
@@ -407,8 +398,8 @@
                 class="member-photo"
                 src="images/member-3.jpg"
                 alt="profile avatar"
-                height="30px"
-                width="30px"
+                height="30"
+                width="30"
               />
               <div class="member-info">
                 <p>
@@ -420,8 +411,8 @@
               <img
                 src="icons/next.png"
                 alt="icon of a right arrow"
-                height="20px"
-                width="20px"
+                height="20"
+                width="20"
               />
             </div>
 
@@ -430,8 +421,8 @@
                 class="member-photo"
                 src="images/member-4.jpg"
                 alt="profile avatar"
-                height="30px"
-                width="30px"
+                height="30"
+                width="30"
               />
               <div class="member-info">
                 <p>
@@ -443,8 +434,8 @@
               <img
                 src="icons/next.png"
                 alt="icon of a right arrow"
-                height="20px"
-                width="20px"
+                height="20"
+                width="20"
               />
             </div>
           </div>
@@ -487,14 +478,14 @@
             <h2>Send Email Notifications</h2>
             <label class="switch">
               <input type="checkbox" id="email-settings" />
-              <div class="slider round"></div>
+              <span class="slider round"></span>
             </label>
           </div>
           <div class="settings-slider">
             <h2>Set Profile to Public</h2>
             <label class="switch">
               <input type="checkbox" id="profile-settings" />
-              <div class="slider round"></div>
+              <span class="slider round"></span>
             </label>
           </div>
           <select id="timezone-select" class="timezone-select">
