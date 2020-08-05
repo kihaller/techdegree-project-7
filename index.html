@@ -23,8 +23,9 @@
       </a>
 
       <h1><strong>Your</strong>App&trade;</h1>
-      <div class="notification-icon">
-        <a href="icons/icon-bell.svg">
+
+      <div class="notification-icon" id="notification-icon">
+        <a href="#">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 35 35"
@@ -39,7 +40,36 @@
             <circle cx="30" cy="5" r="5" fill="#81C98F"></circle>
           </svg>
         </a>
+
+        <!--Notification pop-up-->
+        <div class="popup-container" id="popup-container">
+          <div class="pop-up">
+            <span class="popup-message"> You have 6 unread messages.</span>
+            <span
+              class="closebtn-popup"
+              onclick="this.parentElement.style.display='none';"
+              >&times;</span
+            >
+          </div>
+          <div class="pop-up">
+            <span class="popup-message"> You have 3 new followers.</span>
+            <span
+              class="closebtn-popup"
+              onclick="this.parentElement.style.display='none';"
+              >&times;</span
+            >
+          </div>
+          <div class="pop-up">
+            <span class="popup-message"> Your password expires in 7 days.</span>
+            <span
+              class="closebtn-popup"
+              onclick="this.parentElement.style.display='none';"
+              >&times;</span
+            >
+          </div>
+        </div>
       </div>
+
       <div class="profile-avatar">
         <img
           src="images/random-avatar.jpg"
@@ -450,7 +480,7 @@
             placeholder="Message for User"
             style="resize: none;"
           ></textarea>
-          <button type="submit">SEND</button>
+          <button type="submit" id="submit" class="submit-message">SEND</button>
         </div>
         <div id="settings" class="widget">
           <h2>SETTINGS</h2>
@@ -458,18 +488,18 @@
           <div class="settings-slider">
             <h2>Send Email Notifications</h2>
             <label class="switch">
-              <input type="checkbox" />
+              <input type="checkbox" id="email-settings" />
               <div class="slider round"></div>
             </label>
           </div>
           <div class="settings-slider">
             <h2>Set Profile to Public</h2>
             <label class="switch">
-              <input type="checkbox" />
+              <input type="checkbox" id="profile-settings" />
               <div class="slider round"></div>
             </label>
           </div>
-          <select class="timezone-select">
+          <select id="timezone-select" class="timezone-select">
             <option value="">Select Timezone</option>
             <option value="-12.0">(GMT -12:00)</option>
             <option value="-11.0">(GMT -11:00)</option>
@@ -504,6 +534,12 @@
           </div>
         </div>
       </div>
+      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+      <link
+        rel="stylesheet"
+        href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
+      />
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
       <script src="js/main.js"></script>
