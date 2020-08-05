@@ -65,13 +65,9 @@ cancel.addEventListener("click", function () {
 });
 
 window.onload = function () {
-  if (timezone.value) {
-    timezone.value = localStorage.getItem("timezone");
-  } else {
-    timezone.value = "";
-  }
-  switch1.checked = localStorage.getItem("switch1");
-  switch2.checked = localStorage.getItem("switch2");
+  timezone.value = localStorage.getItem("timezone") || "";
+  switch1.checked = JSON.parse(localStorage.getItem("switch1"));
+  switch2.checked = JSON.parse(localStorage.getItem("switch2"));
 };
 
 /* Notifications pop-up */
@@ -88,11 +84,18 @@ const message = document.getElementById("input-message");
 
 send.addEventListener("click", function () {
   if (user.value && message.value) {
-    alert("Your message was sent successfully!");
-    user.value = "";
-    message.value = "";
+    // alert("Your message was sent successfully!");
+    // user.value = "";
+    // message.value = "";
+    const span = document.createElement("span");
+    span.innerHTML = "Your message was sent successfully!";
   } else if (!user.value) {
-    alert("Please select a user");
+    const alertP = document.createElement("p");
+    alertP.innerHTML = "Please select a user";
+
+    const userSearch = document.getElementById("input-search");
+    const parentDiv = userSearch.parentNode;
+    parentDiv.insertBefore(alertP, userSearch);
   } else if (!message.value) {
     alert("Please enter a message");
   }

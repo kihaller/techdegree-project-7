@@ -21,7 +21,7 @@ var lineChart = new Chart(document.getElementById("line-chart"), {
         ],
         borderColor: "#7477BF",
         fill: true,
-        fillColor: "#7477BF",
+        backgroundColor: "#7477BF4D",
         borderWidth: 1,
         lineTension: 0,
         pointBorderColor: "#7477BF",
@@ -91,17 +91,7 @@ new Chart(document.getElementById("bar-chart"), {
     labels: ["S", "M", "T", "W", "T", "F", "S"],
     datasets: [
       {
-        barPercentage: 0.5,
-
-        backgroundColor: [
-          "#7477BF",
-          "#7477BF",
-          "#7477BF",
-          "#7477BF",
-          "#7477BF",
-          "#7477BF",
-          "#7477BF",
-        ],
+        backgroundColor: "#7477BF",
         data: [100, 80, 150, 100, 200, 230, 75],
       },
     ],
@@ -110,6 +100,11 @@ new Chart(document.getElementById("bar-chart"), {
     maintainAspectRatio: false,
     legend: { display: false },
     scales: {
+      xAxes: [
+        {
+          barPercentage: 0.5,
+        },
+      ],
       yAxes: [
         {
           ticks: {
@@ -141,10 +136,10 @@ new Chart(document.getElementById("doughnut-chart"), {
     maintainAspectRatio: false,
     legend: {
       position: "right",
-      align: "middle",
+      align: "center",
       labels: {
         fontColor: "#777",
-        boxWidth: 20,
+        boxWidth: 15,
         padding: 20,
       },
     },
