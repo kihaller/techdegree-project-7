@@ -15,17 +15,23 @@ for (i = 0; i < close.length; i++) {
     div.style.opacity = "0";
 
     // Hide the div after 600ms (the same amount of milliseconds it takes to fade out)
-    setTimeout(function () {
-      div.style.display = "none";
-    }, 600);
+    setTimeout(
+      function () {
+        div.style.display = "none";
+      },
+
+      600
+    );
   };
 }
 
 /* Mobile Navigation*/
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
 const hamburgerNav = document.getElementById("hamburger-link");
+
 hamburgerNav.addEventListener("click", function () {
   var x = document.getElementById("myLinks");
+
   if (x.style.display === "block") {
     x.style.display = "none";
   } else {
@@ -37,10 +43,38 @@ hamburgerNav.addEventListener("click", function () {
 
 /* Display notifications when user clicks on bell icon*/
 
-const notification = document.getElementById("notification-icon");
-notification.addEventListener("click", function () {
-  const popup = document.getElementById("popup-container");
-  popup.style.visibility = "visible";
+const notificationBell = document.getElementById("notification-icon");
+const popupContainer = document.getElementById("popup-container");
+
+function createAndAddNotificationCard(notificationMessage) {
+  // Create div of class "pop-up"
+  const div = document.createElement("div");
+  div.className = "pop-up";
+  // Create span of class "popup-message"
+  const span = document.createElement("span");
+  span.className = "popup-message";
+  span.textContent = notificationMessage;
+  // Create span of class "closebtn-popup"
+  const spanButton = document.createElement("span");
+  spanButton.className = "closebtn-popup";
+  spanButton.innerHTML = "&times;";
+  spanButton.addEventListener("click", function () {
+    div.style.display = "none";
+  });
+
+  div.appendChild(span);
+  div.appendChild(spanButton);
+
+  popupContainer.appendChild(div);
+}
+
+notificationBell.addEventListener("click", function () {
+  // Make popup-container visible
+  if (popupContainer.style.display === "flex") {
+    popupContainer.style.display = "none";
+  } else {
+    popupContainer.style.display = "flex";
+  }
 });
 
 /* Local Storage Settings */
@@ -68,6 +102,11 @@ window.onload = function () {
   timezone.value = localStorage.getItem("timezone") || "";
   switch1.checked = JSON.parse(localStorage.getItem("switch1"));
   switch2.checked = JSON.parse(localStorage.getItem("switch2"));
+
+  // Create 3 notification cards and add them to popup-container
+  createAndAddNotificationCard("You have 6 unread messages.");
+  createAndAddNotificationCard("You have 3 new followers.");
+  createAndAddNotificationCard("Your password expires in 7 days.");
 };
 
 /* Notifications pop-up */
@@ -81,26 +120,37 @@ notificationIcon.addEventListener("click", function () {});
 const send = document.getElementsByClassName("submit-message")[0];
 const user = document.getElementById("input-search");
 const message = document.getElementById("input-message");
+const container = document.getElementById("container-message");
+const spanSubmit = document.getElementById("user-message-submit");
+const spanUser = document.getElementById("user");
+const spanMessage = document.getElementById("user-message");
+const overlay = document.getElementById("overlay");
 
 send.addEventListener("click", function () {
   if (user.value && message.value) {
-    // alert("Your message was sent successfully!");
-    // user.value = "";
-    // message.value = "";
-    const span = document.createElement("span");
-    span.innerHTML = "Your message was sent successfully!";
+    spanSubmit.textContent = "Your message was sent successfully!";
+    overlay.style.display = "flex";
   } else if (!user.value) {
-    const alertP = document.createElement("p");
-    alertP.innerHTML = "Please select a user";
-
-    const userSearch = document.getElementById("input-search");
-    const parentDiv = userSearch.parentNode;
-    parentDiv.insertBefore(alertP, userSearch);
+    spanUser.style.display = "block";
+    spanUser.textContent = "Please select a user:";
   } else if (!message.value) {
-    alert("Please enter a message");
+    spanMessage.style.display = "block";
+    spanMessage.textContent = "Please enter a message:";
   }
+});
+
+const overlayButton = document.getElementById("overlay-button");
+overlayButton.addEventListener("click", function () {
+  overlay.style.display = "none";
+  user.value = "";
+  message.value = "";
+  spanUser.style.display = "none";
+  spanMessage.style.display = "none";
 });
 
 /* Autocomplete search user*/
 var tags = ["Victoria Chambers", "Dale Byrd", "Dawn Wood", "Dan Oliver"];
-$("#input-search").autocomplete({ source: tags });
+
+$("#input-search").autocomplete({
+  source: tags,
+});

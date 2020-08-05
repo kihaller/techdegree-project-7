@@ -43,30 +43,14 @@
 
         <!--Notification pop-up-->
         <div class="popup-container" id="popup-container">
-          <div class="pop-up">
-            <span class="popup-message"> You have 6 unread messages.</span>
+          <!-- <div class="pop-up" id="notification">
+            <span class="popup-message" id="notification-text"> </span>
             <span
               class="closebtn-popup"
               onclick="this.parentElement.style.display='none';"
               >&times;</span
             >
-          </div>
-          <div class="pop-up">
-            <span class="popup-message"> You have 3 new followers.</span>
-            <span
-              class="closebtn-popup"
-              onclick="this.parentElement.style.display='none';"
-              >&times;</span
-            >
-          </div>
-          <div class="pop-up">
-            <span class="popup-message"> Your password expires in 7 days.</span>
-            <span
-              class="closebtn-popup"
-              onclick="this.parentElement.style.display='none';"
-              >&times;</span
-            >
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -467,27 +451,34 @@
         </div>
         <div id="message-user" class="widget">
           <h2>MESSAGE USER</h2>
-          <!-- <p style="color: red;">Please enter a user below!</p> -->
-          <input
-            type="text"
-            class="input"
-            id="input-search"
-            placeholder="Search for User"
-          />
-          <!-- <p style="color: red;">Please enter a message below!</p> -->
-          <textarea
-            name="input-message"
-            class="input"
-            id="input-message"
-            placeholder="Message for User"
-            style="resize: none;"
-          ></textarea>
+          <div id="container-message">
+            <span id="user"></span>
+            <input
+              type="text"
+              class="input"
+              id="input-search"
+              placeholder="Search for User"
+            />
+            <span id="user-message"> </span>
 
-          <!-- <span>Your message was sent</span> -->
-          <button type="submit" id="submit" class="submit-message">SEND</button>
-          <!-- <button type="submit" id="submit" class="submit-message">
-            NEW MESSAGE
-          </button> -->
+            <textarea
+              name="input-message"
+              class="input"
+              id="input-message"
+              placeholder="Message for User"
+              style="resize: none;"
+            ></textarea>
+
+            <button type="submit" id="submit" class="submit-message">
+              SEND
+            </button>
+            <div class="overlay" id="overlay">
+              <span id="user-message-submit"></span>
+              <button type="submit" class="submit-message" id="overlay-button">
+                SEND ANOTHER MESSAGE
+              </button>
+            </div>
+          </div>
         </div>
         <div id="settings" class="widget">
           <h2>SETTINGS</h2>

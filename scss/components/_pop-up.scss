@@ -4,9 +4,8 @@
 
 /* Popup container */
 .popup-container {
-  visibility: hidden;
+  display: none;
   position: absolute;
-  display: flex;
   flex-direction: column;
   cursor: pointer;
   top: 30px;
