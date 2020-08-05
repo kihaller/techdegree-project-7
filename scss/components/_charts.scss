@@ -1,7 +1,5 @@
 .chart-container {
-  // position: relative;
   height: 250px;
-  // width: 100vw;
 }
 
 canvas {
@@ -12,26 +10,25 @@ canvas {
 
 .line-chart {
   display: flex;
-  align-items: center;
+  align-items: right;
+  justify-content: center;
 
   .chart-buttons {
     margin-left: auto;
     font-size: $font-size;
-    margin-right: 20px;
   }
 }
 
 
 .chart-buttons input[type="radio"] {
   opacity: 0;
-  position: fixed;
-  width: 60px;
-
+  width: 50px;
 }
 
 .chart-buttons {
+
   .button {
-    width: 60px;
+    width: 50px;
     display: inline-block;
     text-align: center;
 
@@ -50,6 +47,6 @@ canvas {
   background-color: $color-green;
   color: #FFF;
   outline: none;
-  padding: 8px;
+  padding: 6px;
   border-radius: 15px;
 }

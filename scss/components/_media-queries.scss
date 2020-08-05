@@ -37,6 +37,20 @@
     font-size: 26px;
 
   }
+
+  //Line Chart
+
+  .line-chart {
+    display: flex;
+    align-items: center;
+
+    .chart-buttons {
+      margin-left: auto;
+      font-size: $font-size;
+      margin-right: 20px;
+
+    }
+  }
 }
 
 @media screen and (min-width: $breakpoint-laptop) {
@@ -109,4 +123,6 @@
   #settings {
     grid-column: 2 / span 1;
   }
+
+
 }
