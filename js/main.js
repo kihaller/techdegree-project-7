@@ -84,11 +84,13 @@ const save = document.getElementById("save-button");
 const cancel = document.getElementById("cancel-button");
 const switch1 = document.getElementById("email-settings");
 const switch2 = document.getElementById("profile-settings");
+const savingsMessage = document.getElementById("savings-message");
 
 save.addEventListener("click", function () {
   localStorage.setItem("timezone", timezone.value);
   localStorage.setItem("switch1", switch1.checked);
   localStorage.setItem("switch2", switch2.checked);
+  savingsMessage.textContent = "Your settings have been saved!";
 });
 
 cancel.addEventListener("click", function () {
@@ -96,6 +98,7 @@ cancel.addEventListener("click", function () {
   timezone.value = "";
   switch1.checked = false;
   switch2.checked = false;
+  savingsMessage.textContent = "Your settings preferences have been canceled!";
 });
 
 window.onload = function () {

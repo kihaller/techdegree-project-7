@@ -39,7 +39,6 @@
   font-size: 1em;
   color: $color-text;
   font-size: 35px;
-
 }
 
 
@@ -52,7 +51,6 @@
 
   .member:last-child {
     border: none;
-
   }
 
   .member {
@@ -73,7 +71,6 @@
       display: block;
       flex: auto;
       border-bottom: none;
-
     }
 
     p,
@@ -91,7 +88,6 @@
     span {
       font-size: $font-size;
       font-weight: bold;
-
     }
   }
 }
@@ -100,10 +96,16 @@
 
 #mobile-users {
   padding-bottom: 20px;
-
 }
 
 #daily-traffic {
   padding-bottom: 10px;
+}
 
+//Settings widget
+
+#savings-message {
+  color: $color-primary;
+  font-weight: bold;
+  font-size: .8em;
 }
